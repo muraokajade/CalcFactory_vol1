@@ -49,7 +49,7 @@
         </header> --}}
 
         <!-- Page Content -->
-        <main>
+        <main class="w-3/5">
             {{ $slot }}
         </main>
     </div>

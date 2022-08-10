@@ -1,6 +1,6 @@
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-full mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
@@ -12,24 +12,24 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
                     <x-nav-link :href="route('ingredients.index')" :active="request()->routeIs('ingredients.index')">
                         {{ __('原材料管理') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('recipes.index')" :active="request()->routeIs('recipes.index')">
+                    {{-- <x-nav-link :href="route('recipes.index')" :active="request()->routeIs('recipes.index')">
                         {{ __('レシピ管理') }}
-                    </x-nav-link>
+                    </x-nav-link> --}}
                     <x-nav-link :href="route('cakes.index')" :active="request()->routeIs('cakes.index')">
-                        {{ __('お菓子一覧') }}
+                        {{ __('お菓子ライブラリ') }}
                     </x-nav-link>
                     <x-nav-link :href="route('products.index')" :active="request()->routeIs('products.index')">
                         {{ __('製品一覧') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        {{ __('売上チャート') }}
+                    </x-nav-link>
                 </div>
             </div>
-
+            
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <x-dropdown align="right" width="48">
