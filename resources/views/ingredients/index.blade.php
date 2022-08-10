@@ -16,6 +16,8 @@
                       <div class="overflow-auto">
                          <input type="text" id="search" class="mt-1 border-2  w-60 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"> <input class="p-2 bg-gray-200" type="button" value="絞り込む" id="button"> <input class="p-2  bg-gray-200" type="button" value="すべて表示" id="button2">
                         <button class="ml-2 text-white whitespace-nowrap bg-indigo-400 border-0 p-2 focus:outline-none hover:bg-indigo-600 rounded" id="editing" type="submit">変更</button>
+                        {!! $ingredients->links() !!}
+                        
                         <table id="result" class="table-auto w-full border-2 text-left whitespace-no-wrap mt-4">
                           <thead>
                             <tr>

@@ -8,6 +8,8 @@ use App\Models\Cake;
 use App\Models\Recipe;
 use App\Http\Requests\RecipeRequest;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+
 
 class RecipeController extends Controller
 {
@@ -104,7 +106,7 @@ class RecipeController extends Controller
             }, 2); //ここら辺
             
             
-        } catch (Throwable $e) {
+        } catch (\Throwable $e) {
             Log::error($e);
             throw $e;
         }
