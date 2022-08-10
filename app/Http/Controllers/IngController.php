@@ -9,7 +9,7 @@ class IngController extends Controller
 {
     public function index()
     {
-        $ingredients = Ingredients::pagenate(20);
+        $ingredients = Ingredients::paginate(20);
 
         return view('ingredients.index', compact('ingredients'));
     }
