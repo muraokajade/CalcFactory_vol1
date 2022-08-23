@@ -72,32 +72,14 @@ class RecipeController extends Controller
                 
                 $total_sum = 0;
                 $count = (int)$cake->number;
-                // dump($count);
-                
-                // foreach ($recipes as $recipe) {
-                //     foreach ($ingredients as $ingredient) {
-                //         // $ing_ids = $recipe->pluck('ingredient_id')->contains($ingredient->id);
-                //         $recipes_ing_id = $recipe->ingredient_id;
-                //         $ing_id = $ingredient->pluck('id');
-                //         // dump($recipes_ing_id,$ing_id)s;
-    
-                //         if ($ing_id->contains($recipes_ing_id)) { ///条件分岐「レシピのidと一致するなら通る」
-                //             $total_sum += $recipe->amount * $ingredient->g_price;
-                            
-                //             $total_sums[] = $recipe->amount * $ingredient->g_price;
-                //         }
-                //     }
-                //     // dd($ingredient->g_price);
-                // }
-                
+
                 foreach ($recipes as $recipe){
                     $ingredient = Ingredients::find($recipe->ingredient_id);
                     $total_sum += $recipe->amount * $ingredient->g_price;
                 }
 
         
-                $raw_price = $total_sum / $count; //result良くない　$total_sum
-// dd($raw_price, $total_sum, $count, $ingredients);
+                $raw_price = $total_sum / $count;
 
 
                 $cake->update([
